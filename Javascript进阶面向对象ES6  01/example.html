@@ -1,0 +1,52 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-07-29 16:24:43
+ * @LastEditTime: 2020-07-29 16:50:56
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \暑期前端培训\6. Javascript   进阶面向对象ES6\Javascript进阶面向对象ES6  01\example.html
+--> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Father {
+            constructor(x,y) {
+                this.x = x
+                this.y = y
+            }
+            money() {
+                console.log(100);
+            }
+            sum() {
+                let sum = this.x+this.y
+                console.log(sum);
+            }
+            say() {
+                return '我是爸爸'
+            }
+        }
+
+        class Son extends Father {
+            constructor(x,y) {
+                super(x,y)
+            }
+            say() {
+                console.log(super.say()+'的儿子');
+            }
+             
+        }
+
+        let son = new Son()
+        son.say()
+    </script>
+    
+</body>
+</html>
